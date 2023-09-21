@@ -1,0 +1,20 @@
+body:active{
+  color: white;
+  background-color: white;
+
+}
+button{
+  background-color: aqua;
+  font-weight: bold;
+  color: brown;
+  border-radius: 10px ;
+  border: none;
+  padding: 12px;
+
+
+}
+h3{
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
