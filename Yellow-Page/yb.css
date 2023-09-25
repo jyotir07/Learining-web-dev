@@ -1,6 +1,5 @@
 button{
   display: grid;
-  /* grid-template-columns: repeat(3,1fr); */
   color: aqua;
   background-color: yellow;
   border: 12px;
