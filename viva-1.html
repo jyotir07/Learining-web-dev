@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+  <meta charset="UTF-8"> <!-- Character encoding declaration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsive design -->
+  <title>Date to Month Converter</title> 
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* CSS style to set the font family for the body */
+    }
+  </style>
+  </head>
+  <body>
+
+  <h2>Date to Month Converter</h2>
+
+  <form id="dateForm"> <!-- Form element with an ID attribute -->
+    <label for="dateInput">Select a date:</label> <!-- Label for the date input field -->
+    <input type="date" id="dateInput" name="dateInput"> <!-- Date input field -->
+    <input type="submit" value="Convert"> <!-- Submit button for the form -->
+  </form>
+
+  <div id="result"></div> <!-- Result container for displaying the selected month -->
+
+  <script>
+    document.getElementById('dateForm').addEventListener('submit', function(event) { <!-- JavaScript script tag -->
+      event.preventDefault(); // Prevent form submission
+
+      var dateInput = document.getElementById('dateInput').value; // Retrieve the value of the date input field
+      var selectedDate = new Date(dateInput); // Create a new Date object from the selected date
+      var month = selectedDate.toLocaleString('default', { month: 'long' }); // Get the month name from the Date object
+
+      document.getElementById('result').innerHTML = "Selected month: " + month; // Display the selected month in the result container
+    });
+  </script>
+
+  </body>
+</html>
