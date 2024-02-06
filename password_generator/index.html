@@ -8,58 +8,53 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Container for password generator -->
+    <div class='parent-gen-pwd'>
 
-    <div class = 'parent-gen-pwd'>
+      <!-- Output div where generated password will be displayed -->
+      <div class='output' id='output'> Password </div>
 
-      <div class = 'output' id = 'output'> Password </div>
-
-      <div class = 'wrapper-input'>
-
-        <label for = 'lengthPwd'> Length </label>
-        <input type = 'range' id = 'lengthPwd' min = '8' max = '128'
-        value = '50' oninput="this.nextElementSibling.
-        textContent = this.value">
+      <!-- Input for selecting password length -->
+      <div class='wrapper-input'>
+        <label for='lengthPwd'> Length </label>
+        <!-- Range input for selecting password length -->
+        <input type='range' id='lengthPwd' min='8' max='128' value='50' oninput="this.nextElementSibling.textContent = this.value">
+        <!-- Display current value of range input -->
         <span>64</span>
       </div>
 
-      <div class = 'wrapper-input'>
-
-        <label for = 'smallLetters'> Lower Case </label>
-        <input type = 'checkbox' id = 'smallLetters' checked> 
-
+      <!-- Checkbox for including lowercase letters -->
+      <div class='wrapper-input'>
+        <label for='smallLetters'> Lower Case </label>
+        <input type='checkbox' id='smallLetters' checked> 
       </div>
 
-      <div class = 'wrapper-input'>
-
-        <label for = 'bigLetters'> Upper Case </label>
-        <input type = 'checkbox' id = 'bigLetters' checked> 
-
+      <!-- Checkbox for including uppercase letters -->
+      <div class='wrapper-input'>
+        <label for='bigLetters'> Upper Case </label>
+        <input type='checkbox' id='bigLetters' checked> 
       </div>
 
-      <div class = 'wrapper-input'>
-
-        <label for = 'numbers'> Numbers </label>
-        <input type = 'checkbox' id = 'numbers' checked> 
-        
+      <!-- Checkbox for including numbers -->
+      <div class='wrapper-input'>
+        <label for='numbers'> Numbers </label>
+        <input type='checkbox' id='numbers' checked> 
       </div>
 
-      <div class = 'wrapper-input'>
-
-        <label for = 'special'> Special Characters </label>
-        <input type = 'checkbox' id = 'special' checked> 
-        
+      <!-- Checkbox for including special characters -->
+      <div class='wrapper-input'>
+        <label for='special'> Special Characters </label>
+        <input type='checkbox' id='special' checked> 
       </div>
 
-      <div class = 'wrapper-input'>
-
-        <button type = 'button' id = 'generate'> Generate </button>
-        <button type = 'button' id = 'copy'> Copy </button>
-        
+      <!-- Buttons for generating and copying password -->
+      <div class='wrapper-input'>
+        <button type='button' id='generate'> Generate </button>
+        <button type='button' id='copy'> Copy </button>
       </div>
-
-
 
     </div>
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
   </body>
-</html> 
+</html>
