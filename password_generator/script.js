@@ -1,3 +1,4 @@
+// Author: jyotir07 @github
 const output = document.querySelector('#output');
 const lengthPwd = document.querySelector('#lengthPwd');
 const checkboxes = {
