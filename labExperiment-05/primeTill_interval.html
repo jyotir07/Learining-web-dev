@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //JavaScript Program to Print All Prime Numbers in an Interval
+    var low = parseInt(prompt("Enter the lower limit: "));
+    var high = parseInt(prompt("Enter the upper limit: "));
+    document.write("Prime numbers between " + low + " and " + high + " are: ");
+    
+    for (var i = low; i <= high; i++) {
+      var flag = 0; //flag variable to check if the number is prime
+      for (var j = 2; j < i; j++) {
+        if (i % j === 0) {
+          flag = 1; //if the number is divisible by any other number, it is not prime
+          break;
+        }
+      }
+      if (i > 1 && flag === 0) { //if the number is greater than 1 and flag is 0, it is prime
+        document.write(i + " ");
+      }
+    }
+  </script>
+</body>
+</html>
