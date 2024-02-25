@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" id="string" placeholder="Enter a string">
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function longestWord(str) {
+      var words = str.split(" "); //splitting the string into words
+      var longest = words[0]; //initializing the longest word to the first word
+      for (var i = 1; i < words.length; i++) {
+        if (words[i].length > longest.length) {
+          longest = words[i];
+        }
+      }
+      return longest;
+    }
+    
+    document.getElementById('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var str = document.getElementById('string').value;
+      console.log("longest word: " + longestWord(str));
+      document.write("longest word: " + longestWord(str));
+    });
+    // var str = prompt("Enter a string: ");
+    // console.log("longest word: " + longestWord(str));
+    // document.write("longest word: " + longestWord(str));
+  </script>
+</body>
+</html>
