@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case
+  function firstCapital(str) {
+    var words = str.split(" "); //splitting the string into words
+    for (var i = 0; i < words.length; i++) { 
+      var letters = words[i].split(""); //splitting each word into letters
+      letters[0] = letters[0].toUpperCase(); //converting the first letter to upper case
+      words[i] = letters.join("");
+    }
+    return words.join(" ");
+  }
+  //using the above function with user input
+  var str = prompt("Enter a string: ");
+  console.log(firstCapital(str));
+  document.write(firstCapital(str));
+</script>
+  </body>
+</html>
