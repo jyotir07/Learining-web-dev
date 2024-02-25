@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    document.write('Random String: ' + randomString(10));
+    ">Generate</button>
+  <script>
+    //JavaScript program to generate a random string
+    function randomString(length) {
+      var result = '';
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      var charactersLength = characters.length; 
+      for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength)); 
+      }
+      return result;
+    }
+    
+    // console.log("Random String: " + randomString(10));
+    // document.write("Random String: " + randomString(10));
+  </script>
+</body>
+</html>
